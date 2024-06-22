@@ -67,6 +67,6 @@ def solve_sudoku(board):
                 return True
 
             board[row][col] = 0
-'''seducco game'''
+'''seducco game Assignment'''
     return False
 
