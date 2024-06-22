@@ -85,3 +85,29 @@ def generate_board():
 
     return board
 
+def play_game(players):
+    board = generate_board()
+    empty_cells = [(i, j) for i in range(9) for j in range(9) if board[i][j] == 0]
+
+    while empty_cells:
+        for player in players:
+            print_board(board)
+            print(f"{player.name}'s turn. Score: {player.score}")
+
+            row, col = random.choice(empty_cells)
+            print(f"Suggested move: row={row+1}, col={col+1}")
+            value = int(input(f"{player.name}, enter a value (1-9): "))
+
+            if player.make_move(board, row, col, value):
+                empty_cells.remove((row, col))
+            else:
+                print("Invalid move. Try again.")
+
+    print("Game over!")
+    for player in players:
+        print(f"{player.name}'s final score: {player.score}")
+
+
+player1 = Player("Player 1")
+player2 = Player("Player 2")
+play_game([player1, player2])
