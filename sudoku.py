@@ -51,3 +51,22 @@ def is_valid(board, num, pos):
                 return False
 
     return True
+
+def solve_sudoku(board):
+    find = find_empty(board)
+    if find[0] is None:
+        return True
+
+    row, col = find
+
+    for i in range(1, 10):
+        if is_valid(board, i, (row, col)):
+            board[row][col] = i
+
+            if solve_sudoku(board):
+                return True
+
+            board[row][col] = 0
+
+    return False
+
