@@ -1,11 +1,9 @@
-Adding a sudoku game using  python 
-Group members     
-id number
-1,Biruk Ashagre  
-1401048
-2,Abdelah Nesredin 
-1400751
-3,Fuad Seid    
-4, Elias Aynekulu
-5, Desalegn Mulat 
-6, Meron Nisrane 
+
+Name                                                                Id
+1.Elias Aynekulu……………………………….1402639
+2.Dessalegne Mulat…………………………….1401145
+3.Abdela Nesredin ……………………………. 1400751
+4.Biruk Ashagre………………………………… 1401048
+5.Fuad Seid…………………………………………1401283
+6.Meron Nisrane……………………………….1401758
+
