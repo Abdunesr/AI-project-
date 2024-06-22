@@ -67,6 +67,21 @@ def solve_sudoku(board):
                 return True
 
             board[row][col] = 0
-'''seducco game Assignment'''
+
     return False
+    
+def generate_board():
+    board = [[0 for _ in range(9)] for _ in range(9)]
+    solve_sudoku(board)
+
+   
+    for _ in range(40):
+        row = random.randint(0, 8)
+        col = random.randint(0, 8)
+        while board[row][col] == 0:
+            row = random.randint(0, 8)
+            col = random.randint(0, 8)
+        board[row][col] = 0
+
+    return board
 
